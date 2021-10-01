@@ -10,9 +10,9 @@ function calculateMultiplyOfSides(base, height){
 
 function calculateAreaOfTriangles(){
     const multiplyOfSides = calculateMultiplyOfSides(Number(bases[0].value), Number(bases[1].value));
-    const areaOfTriangles = Math.sqrt(multiplyOfSides);
-    console.log(areaOfTriangles);
-    outputEl.innerText ="The Area of Triangle is" + areaOfTriangles
+    // const areaOfTriangles = Math.sqrt(multiplyOfSides);
+    // console.log(areaOfTriangles);
+    outputEl.innerText ="The Area of Triangle is" + multiplyOfSides
 }
 
 areaOfTriangleBtn.addEventListener("click", calculateAreaOfTriangles);
