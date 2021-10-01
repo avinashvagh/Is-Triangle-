@@ -1,19 +1,19 @@
-const baseValue = document.querySelector('.input-base');
-const heightValue = document.querySelector('.input-height')
+const bases = document.querySelectorAll('.input-base');
 const areaOfTriangleBtn = document.querySelector('#areaoftriangle-btn');
 const outputEl = document.querySelector('#output');
 
-function calculateAreaOfTriangles(base, height){
-    const areaOfTriangles = ( base*height) /2 ;
-
-    return areaOfTriangles;
+function calculateMultiplyOfSides(base, height){
+    const multiplyOfSides = base*height/2;
+    // console.log(multiplyOfSides);
+    return multiplyOfSides;
 }
 
-function calculateAreaTriangles(){
-    const areaOfTriangles = calculateAreaOfTriangles(Number(baseValue.value), Number(heightValue.value));
-    const areaValueTriangles = Math.sqrt(areaOfTriangles);
-    console.log(areaValueTriangles);
-    outputEl.innerText = "Area Of triangle is " + areaValueTriangles
+function calculateAreaOfTriangles(){
+    const multiplyOfSides = calculateMultiplyOfSides(Number(bases[0].value), Number(bases[1].value));
+    const areaOfTriangles = Math.sqrt(multiplyOfSides);
+    console.log(areaOfTriangles);
+    outputEl.innerText ="The Area of Triangle is" + areaOfTriangles
 }
 
-areaOfTriangleBtn.addEventListener("click", calculateAreaTriangles);
+areaOfTriangleBtn.addEventListener("click", calculateAreaOfTriangles);
+
